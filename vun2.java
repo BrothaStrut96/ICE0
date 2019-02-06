@@ -4,11 +4,6 @@
 class vun2 {
 
     public static int multAccum(int oldAcc, int newVal, int scale) {
-        // May result in overflow
-        return oldAcc + (newVal * scale);
-    }
-
-    public static int multAccum(int oldAcc, int newVal, int scale) {
         return safeAdd(oldAcc, safeMultiply(newVal, scale));
     }
 
